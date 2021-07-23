@@ -31,13 +31,7 @@ class WorldEditOperations(private val plugin: OwnGarden) {
      * @return Whether the current WorldEdit version should be accepted.
      */
     fun checkWorldEditVersion(): Boolean {
-        val version = Bukkit.getPluginManager().getPlugin("WorldEdit")!!.description.version
-        for (prefix in WORLDEDIT_VERSIONS) {
-            if (version.startsWith(prefix)) {
-                return true
-            }
-        }
-        return false
+        return true
     }
 
     /**
